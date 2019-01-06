@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+  <style type="text/css">
+    a {
+      color: black;
+      display: block;
+      margin: 10px 0px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function onload() {
+      document.getElementById('touchstart').addEventListener('touchstart', hello, false);
+      document.getElementById('touchend').addEventListener('touchend', bye, false);
+    }
+
+    function hello() {
+      alert('hello');
+    }
+
+    function bye() {
+      alert('bye');
+    }
+  </script>
+
+  <title>Touch Example</title>
+</head>
+
+<body onload="onload();">
+  <h1>Touch</h1>
+  <a href="#" ontouchstart="hello();return false;">Attribute: ontouchstart</a>
+  <a href="#" ontouchend="bye();return false;">Attribute: ontouchend</a>
+  <a href="#" id="touchstart">addEventListener: touchstart</a>
+  <a href="#" id="touchend">addEventListener: touchend</a>
+</body>
+
+</html>
